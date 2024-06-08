@@ -33,10 +33,10 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       navigatorKey: kNavigatorKey,
 
-      // initialRoute: AppPages.appEntry,
-      home: StudentPhotoWidget(),
+      initialRoute: AppPages.appEntry,
+      // home: StudentPhotoWidget(),
 
-      // onGenerateRoute: CustomNavigator.controller,
+      onGenerateRoute: CustomNavigator.controller,
     );
   }
 }

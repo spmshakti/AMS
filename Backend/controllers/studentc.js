@@ -39,6 +39,7 @@ const getStudentById = async (req, res) => {
     if (rows.length === 0) {
       return res.status(404).json({ error: "Student not found" });
     }
+    console.log("Rows:", rows);
     res.json({ student: rows[0] });
   } catch (error) {
     console.error("Error in getStudentById:", error);
@@ -111,9 +112,6 @@ const getAllClassrooms = async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 };
-
-
-
 const concatClassroomId=async (req, res) => {
   try{
       let professorCode=req.body.professorCode;
@@ -147,4 +145,4 @@ const concatClassroomId=async (req, res) => {
       res.status(500).json({ error: "Internal server error" });
   }
 };
-module.exports = { createStudent, getStudentById, updateStudent, deleteStudent, getAllClassrooms, concatClassroomId };
+module.exports = { createStudent, getStudentById, updateStudent, deleteStudent, getAllClassrooms, concatClassroomId  };
